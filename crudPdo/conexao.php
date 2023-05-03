@@ -8,7 +8,8 @@ try {
 	$conexao->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
 	
 } catch (Exception $e) {
-	echo "Erro ao conectar com o Banco de Dados! ".$e;
+	echo "Erro ao conectar com o Banco de Dados! ".$e->getTraceAsString();
+	echo "Erro ao conectar com o Banco de Dados!".$e->getMessage();
 }
 
 
